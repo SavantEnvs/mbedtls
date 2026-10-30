@@ -1,0 +1,9 @@
+project: savantenvs/mbedtls
+target: fuzz_pkcs7
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_pkcs7/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_pkcs7
+    libfuzzer: true
+    timeout: 10
